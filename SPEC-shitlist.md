@@ -1,6 +1,6 @@
-# SUPER SPEC — Slop Radar
+# SUPER SPEC — SHITLIST
 
-*Creative-AI tool #1 · super-spec v2 (July 2026) · status: design frozen, building*
+*A living radar for creative slop · super-spec v2 (July 2026) · status: design frozen, building*
 
 ---
 
@@ -86,9 +86,9 @@ It doesn't say *"this word is overused"*. It says: *"careful — this entire loo
 ## Open decisions
 
 - v2 living-corpus sources (curated + trending: which feeds/archives?).
-- v1 category (luxury/jewellery is a strong candidate — dense aesthetic codes, fast-moving clichés).
+- v1 category: one vertical with dense aesthetic codes and fast-moving clichés — AI short films are the current lean (it's the flood I watch daily).
 - Score or qualitative only? (qualitative + a light score, consistent with Brand QA).
 
 ---
 
-*Sibling: **Brand QA** (`SPEC-brand-qa.md`). Slop Radar asks "is it fresh (NOW)?" (originality + cultural drift). Brand QA asks "is it ours?" (fidelity + client memory). They share the infrastructure: living model + memory/retrieval + feedback log + evals + human-in-the-loop. Build the first, the second costs less.*
+*Sibling: **[Brand QA](https://github.com/HiroshigeG/brand-qa)**. Shitlist asks "is it fresh (NOW)?" (originality + cultural drift). Brand QA asks "is it ours?" (brand fidelity). They share the infrastructure: living model + memory/retrieval + feedback log + evals + human-in-the-loop. Build the first, the second costs less.*

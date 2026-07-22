@@ -1,38 +1,28 @@
-# Slop Radar & Brand QA
+# SHITLIST
 
-**Two specs for creative quality in the AI era — published as ideas, in the open, while I build them.**
+**A living radar for creative slop — published as an idea, in the open, while I build it.**
 
-AI can generate a thousand assets before lunch. That created two questions nobody's tooling answers well:
+You bring an idea or a direction; Shitlist tells you **how slop it is RIGHT NOW** — the obvious version everyone would make, the clichés you're brushing against *this month*, the references you're copying without noticing — and challenges you to go further.
 
-| Tool | The question it answers | The axis |
-|---|---|---|
-| **[Slop Radar](SPEC-slop-radar.md)** | *"Is this fresh — right now?"* | Originality vs. the current flood |
-| **[Brand QA](SPEC-brand-qa.md)** | *"Is this ours?"* | Brand soul vs. generic-with-a-logo |
+**It never writes the idea. It keeps the creative honest.**
 
-Same philosophy in both: **the AI is a critical foil, never the author.** It takes the predictable half of the space off the table and challenges the human — who keeps the pen.
+## The insight that makes it a product
 
-## Why "slop radar" and not another idea generator
+Slop **moves.** The "fresh" AI aesthetic of three months ago is today's cliché. A frozen slop-detector is useless in six months. So the core isn't a list of clichés — it's a **living, dated corpus** of what became banal *this quarter*, refreshed from the actual flood. Real-time cultural awareness, not a dead list. No static guideline document has it.
 
-The insight that makes it a product: **slop moves.** The "fresh" AI aesthetic of three months ago is today's cliché. A frozen slop-detector is useless in six months. So the core isn't a list of clichés — it's a **living, dated corpus** of what became banal *this quarter*, refreshed from the actual flood. That's cultural awareness in real time, and no static guideline document has it.
+## Read the spec
 
-Brand QA is the sibling: existing tools (CreativeX, Adobe Brand Intelligence) check **compliance** — logo visible, colors right, product in frame. Nobody checks the **soul**: does this *feel* like the brand, or is it category-generic luxury wearing the logo? That's the art director's eye, encoded as a curated codebook the human writes and the model reasons against.
+The full super-spec is in **[SPEC-shitlist.md](SPEC-shitlist.md)**: the four-layer living slop model (dated cliché corpus, reference index, feedback log, learned calibration), the flow, how it learns without fine-tuning, the data tables, the eval plan, and the open decisions.
 
 ## Status — honest
 
-- **Stage:** super-specs (July 2026), design frozen enough to build. This repo is the thinking, published before the code — the same way I published [taco-score](https://github.com/HiroshigeG/taco-score) with its validation protocol frozen before the data grew.
-- **Being built as:** capstone for an AI-builders program, then portfolio tools.
-- **v1 scope (each):** one screen, one curated corpus/codebook, retrieval + human feedback loop logged from day one.
-- **v2:** semi-automatic trend ingestion (Slop Radar), multi-brand + video + batch (Brand QA).
+- **Stage:** super-spec (July 2026), design frozen enough to build. This repo is the thinking, published before the code — the same way I published [taco-score](https://github.com/HiroshigeG/taco-score) with its validation protocol frozen before the data grew.
+- **v1:** one screen, paste → slop map + logged thumbs up/down, hand-curated dated corpus for one category, retrieval active.
+- **v2:** semi-automatic ingest of trending AI content (the real cultural refresh), per-team calibration, a Slack bot, freshness trends over time.
 
-## The part that compounds
+## Sibling project
 
-Both tools get better with use, without fine-tuning:
-- **Slop Radar** — corpus refresh (dated entries), retrieval per call, and thumbs-up/down calibration per team: *your* slop threshold isn't a junior's.
-- **Brand QA** — the codebook is the asset; every human "correct/defend" verdict refines the rubric. The QA **is** an eval system.
-
-## Stack (deliberately boring)
-
-Supabase + pgvector (corpora, codebooks, calls, calibration) · Claude as the critic engine · n8n for refresh/ingest pipelines · a single-screen front end · eval loops from day one (precision/recall on curated known-slop vs. known-fresh sets).
+**[Brand QA](https://github.com/HiroshigeG/brand-qa)** asks the other question — *"is it ours?"* (brand-soul fidelity). Shitlist asks *"is it fresh — right now?"* (originality vs. the current flood). Same philosophy: **AI as a critical foil, never the author.** They share infrastructure: living model + retrieval + feedback log + evals + human-in-the-loop.
 
 ## License
 
